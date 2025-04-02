@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchServices } from "../features/services/servicesSlice";
-import { RootState } from "../app/store";
+import { RootState } from "../app/types";
 import Loader from "../components/Loader";
 import ErrorBlock from "../components/ErrorBlock";
 import { Link } from "react-router-dom";

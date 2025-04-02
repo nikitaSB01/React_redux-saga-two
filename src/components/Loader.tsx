@@ -1,10 +1,8 @@
 import React from "react";
-import spinner from "/spinner.png"; // ты загружал spinner.png, положи его в public или в assets
+import "./Loader.css"; // подключим анимацию через CSS
 
-const Loader: React.FC = () => (
-  <div style={{ textAlign: "center", padding: "20px" }}>
-    <img src={spinner} alt="Загрузка..." />
-  </div>
-);
+const Loader: React.FC = () => {
+  return <div className="spinner"></div>;
+};
 
 export default Loader;

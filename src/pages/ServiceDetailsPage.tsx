@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchServiceDetails } from "../features/services/detailsSlice";
-import { RootState } from "../app/store";
+import { RootState } from "../app/types";
 import Loader from "../components/Loader";
 import ErrorBlock from "../components/ErrorBlock";
 import type { AppDispatch } from "../app/store"; // путь может отличаться

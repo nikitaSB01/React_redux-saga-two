@@ -1,20 +1,18 @@
 import React from "react";
+import "./ErrorBlock.css";
 
-interface Props {
+interface ErrorBlockProps {
   message: string;
   onRetry: () => void;
 }
 
-const ErrorBlock: React.FC<Props> = ({ message, onRetry }) => (
-  <div style={{ backgroundColor: "#f8d7da", padding: "10px" }}>
-    <span style={{ color: "#721c24", marginRight: "10px" }}>{message}</span>
-    <button
-      onClick={onRetry}
-      style={{ backgroundColor: "#343a40", color: "#fff" }}
-    >
-      Повторить запрос
-    </button>
-  </div>
-);
+const ErrorBlock: React.FC<ErrorBlockProps> = ({ message, onRetry }) => {
+  return (
+    <div className="error-block">
+      <span>{message}</span>
+      <button onClick={onRetry}>Повторить запрос</button>
+    </div>
+  );
+};
 
 export default ErrorBlock;

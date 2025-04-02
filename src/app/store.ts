@@ -6,7 +6,7 @@ import detailsReducer from "../features/services/detailsSlice";
 import type { AnyAction } from "redux";
 import type { RootState } from "./types"; // ✅
 
-const epicMiddleware = createEpicMiddleware<AnyAction, AnyAction, RootState>(); // ✅
+const epicMiddleware = createEpicMiddleware<AnyAction, AnyAction, RootState>();
 
 export const store = configureStore({
   reducer: {
