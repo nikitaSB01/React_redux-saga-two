@@ -20,7 +20,7 @@ const detailsSlice = createSlice({
     fetchServiceDetails: (
       state,
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      action: PayloadAction<number>
+      _action: PayloadAction<number>
     ) => {
       state.loading = true;
       state.error = null;
