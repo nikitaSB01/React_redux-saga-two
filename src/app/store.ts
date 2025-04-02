@@ -3,8 +3,8 @@ import { createEpicMiddleware } from "redux-observable";
 import { rootEpic } from "./rootEpic";
 import servicesReducer from "../features/services/servicesSlice";
 import detailsReducer from "../features/services/detailsSlice";
+import { RootState } from "./types";
 import type { AnyAction } from "redux";
-import type { RootState } from "./types"; // ✅
 
 const epicMiddleware = createEpicMiddleware<AnyAction, AnyAction, RootState>();
 

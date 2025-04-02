@@ -11,7 +11,7 @@ import { Observable } from "rxjs";
 import { AnyAction } from "redux";
 import { Service } from "./types";
 
-const API_URL = "https://httpserver-1-74d4.onrender.com/api/services";
+const API_URL = "https://react-redux-saga-two-bac.onrender.com/api/services";
 
 export const serviceDetailsEpic = (action$: Observable<AnyAction>) =>
   action$.pipe(

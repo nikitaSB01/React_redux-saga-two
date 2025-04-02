@@ -28,9 +28,11 @@ const ServiceListPage: React.FC = () => {
 
   return (
     <ul>
-      {items.map((service: Service) => (
-        <li key={service.id}>
-          <Link to={`/${service.id}/details`}>{service.name}</Link>
+      {items.map((item: Service) => (
+        <li key={item.id}>
+          <Link to={`/${item.id}/details`}>
+            {item.name} — {item.price}
+          </Link>
         </li>
       ))}
     </ul>

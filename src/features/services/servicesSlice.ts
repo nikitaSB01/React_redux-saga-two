@@ -2,13 +2,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Service } from "./types";
 
 export interface ServicesState {
-  list: Service[];
+  items: Service[];
   loading: boolean;
   error: string | null;
 }
 
 const initialState: ServicesState = {
-  list: [],
+  items: [],
   loading: false,
   error: null,
 };
@@ -22,7 +22,7 @@ const servicesSlice = createSlice({
       state.error = null;
     },
     fetchServicesSuccess: (state, action: PayloadAction<Service[]>) => {
-      state.list = action.payload;
+      state.items = action.payload;
       state.loading = false;
     },
     fetchServicesFailure: (state, action: PayloadAction<string>) => {

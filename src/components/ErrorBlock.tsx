@@ -1,5 +1,4 @@
 import React from "react";
-import "./ErrorBlock.css";
 
 interface ErrorBlockProps {
   message: string;

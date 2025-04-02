@@ -25,13 +25,14 @@ const ServiceDetailsPage: React.FC = () => {
   if (loading) return <Loader />;
   if (error) return <ErrorBlock message={error} onRetry={handleRetry} />;
 
-  if (!item) return <p>Услуга не найдена.</p>;
+  if (!item)
+    return <ErrorBlock message="Услуга не найдена" onRetry={handleRetry} />;
 
   return (
     <div>
       <h2>{item.name}</h2>
       <p>
-        <strong>Цена:</strong> {item.price}₽
+        <strong>Цена:</strong> {item.price}
       </p>
       <p>
         <strong>Описание:</strong> {item.content}

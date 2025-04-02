@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const ServicesPage: React.FC = () => {
   const dispatch = useDispatch();
-  const { list, loading, error } = useSelector(
+  const { items, loading, error } = useSelector(
     (state: RootState) => state.services
   );
 
@@ -30,7 +30,7 @@ const ServicesPage: React.FC = () => {
 
       {!loading && !error && (
         <ul>
-          {list.map((item) => (
+          {items.map((item) => (
             <li key={item.id}>
               <Link to={`/${item.id}/details`}>
                 {item.name} — {item.price}₽
