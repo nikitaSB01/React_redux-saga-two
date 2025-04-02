@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Service } from "./types";
 
-interface ServicesState {
+export interface ServicesState {
   list: Service[];
   loading: boolean;
   error: string | null;
