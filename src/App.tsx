@@ -5,7 +5,7 @@ import ServicesPage from "./pages/ServicesPage";
 import ServiceDetailsPage from "./pages/ServiceDetailsPage";
 
 const App: React.FC = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/React_redux-saga-two/">
     <Routes>
       <Route path="/" element={<ServicesPage />} />
       <Route path="/:id/details" element={<ServiceDetailsPage />} />
